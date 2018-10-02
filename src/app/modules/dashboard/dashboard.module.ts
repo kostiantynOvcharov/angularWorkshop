@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import {UserDetailsComponent} from '../../core/components/user-details/user-details.component';
-import {UserDetailsService} from '../../core/services/user-details.service';
+import {
+  DashboardPageComponent,
+  DashboardRoutingModule,
+  UserDetailsComponent,
+  UserDetailsService,
+  UserSkillsComponent,
+  TargetDirective,
+  ContainerComponent} from "./";
 
 @NgModule({
   imports: [
@@ -11,8 +15,14 @@ import {UserDetailsService} from '../../core/services/user-details.service';
     DashboardRoutingModule
   ],
   declarations: [
-    DashboardPageComponent, UserDetailsComponent
+    DashboardPageComponent,
+    ContainerComponent,
+    UserDetailsComponent,
+    UserSkillsComponent,
+    TargetDirective
   ],
+  exports: [UserDetailsComponent, ContainerComponent],
+  entryComponents: [UserDetailsComponent, UserSkillsComponent],
   providers: [UserDetailsService]
 })
 export class DashboardModule { }

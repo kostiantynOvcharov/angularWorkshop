@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UserStore } from '../../../core/storage/user-store';
 import { Observable, Subscription } from 'rxjs';
 import { User } from '../../../core/auth/entity/user';
-import {UserDetailsService} from '../../../core/services/user-details.service';
+import {UserDetailsService} from '../services/user-details.service';
 import {Router} from '@angular/router';
 
 @Component({

@@ -1,19 +1,17 @@
-<div class="container">
-  <div class="col-md-2">
-    <button class="btn btn-success"
-            *ngIf="!userDetailsService.isDisplayed"
-            (click)="onDisplayDetails()">
-      Show details
-    </button>
-    <router-outlet name="popup"></router-outlet>
-  </div>
+<!--<div class="container">-->
+  <!--<div class="col-md-2">-->
+    <!--<button class="btn btn-success"-->
+            <!--*ngIf="!userDetailsService.isDisplayed"-->
+            <!--(click)="onDisplayDetails()">-->
+      <!--Show details-->
+    <!--</button>-->
+    <!--<router-outlet name="popup"></router-outlet>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div class="demo-content">
+  <app-dynamic-component-loading></app-dynamic-component-loading>
 </div>
 
-
-<p>
-  {{ user.getFullName() }}
-  {{user.name}}
-  {{user.telephone}}
-</p>
 
 
