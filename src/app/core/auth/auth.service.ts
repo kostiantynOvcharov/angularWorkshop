@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
@@ -20,7 +19,6 @@ const userDto = {
 export class AuthService {
 
   constructor(
-    // private http: HttpClient
     private userStore: UserStore
   ) {}
 

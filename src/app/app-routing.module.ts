@@ -14,10 +14,9 @@ const routes: Routes = [
     loadChildren: './modules/login/login.module#LoginModule'
   },
   {
-    path: 'user-details',
+    path: 'profile',
     canActivate: [AuthGuard],
-    loadChildren: './modules/dashboard/dashboard.module#DashboardModule',
-    outlet: 'popup'
+    loadChildren: './modules/profile/profile.module#ProfileModule'
   }
 ];
 

@@ -1,0 +1,54 @@
+<div class="profile-page">
+  <h2 class="profile-page-title">Profile page</h2>
+
+  <div class="details-row">
+    <ul>
+      <li>Name: {{user.name}}</li>
+      <li>Surname: {{user.surname}}</li>
+      <li>Address: {{user.address}}</li>
+      <li>Telephone: {{user.telephone}}</li>
+    </ul>
+  </div>
+
+  <h3 class="edit-title">Edit</h3>
+  <form class="profile-page-form"
+        (ngSubmit)="submit()"
+        [formGroup]="form">
+    <div class="profile-page-form__row">
+      <label class="profile-page-form__label">Name: </label>
+      <input class="profile-page-form__input"
+             autofocus
+             type="text"
+             formControlName="name">
+    </div>
+
+    <div class="profile-page-form__row">
+      <label class="profile-page-form__label">Surname: </label>
+      <input class="profile-page-form__input"
+             type="text"
+             formControlName="surname">
+    </div>
+
+    <div class="profile-page-form__row">
+      <label class="profile-page-form__label">Address: </label>
+      <input class="profile-page-form__input"
+             type="text"
+             formControlName="address">
+    </div>
+
+    <div class="profile-page-form__row">
+      <label class="profile-page-form__label">Telephone: </label>
+      <input class="profile-page-form__input"
+             autofocus
+             type="text"
+             formControlName="telephone">
+    </div>
+
+    <div class="profile-page-form__actions">
+      <button type="submit"
+              [disabled]="form.invalid">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
