@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UserStore } from '../../../core/storage/user-store';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { User } from '../../../core/auth/entity/user';
-import {UserDetailsService} from '../services/user-details.service';
-import {Router} from '@angular/router';
+// import {UserDetailsService} from '../services/user-details.service';
+// import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -17,8 +17,8 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
 
   constructor(
     private userStore: UserStore,
-    public userDetailsService: UserDetailsService,
-    private router: Router
+    // public userDetailsService: UserDetailsService,
+    // private router: Router
   ) { }
 
   ngOnInit() {
@@ -32,8 +32,8 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
     this.userStoreSubscription.unsubscribe();
   }
 
-  onDisplayDetails(): void {
-    this.router.navigate([{outlets: { popup: ['user-details']}}]);
-    this.userDetailsService.isDisplayed = true;
-  }
+  // onDisplayDetails(): void {
+  //   this.router.navigate([{outlets: { popup: ['user-details']}}]);
+  //   this.userDetailsService.isDisplayed = true;
+  // }
 }
